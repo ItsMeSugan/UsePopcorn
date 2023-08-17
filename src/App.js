@@ -216,7 +216,7 @@ function WatchedSummary({ watched }) {
 function WatchedMoviesList({ watched, onDeleteWatched }) {
   return (
     <ul className="list">
-      {watched.map((movie) => (
+      {watched?.map((movie) => (
         <WatchedMovie
           movie={movie}
           key={movie.imdbID}
@@ -230,8 +230,8 @@ function WatchedMoviesList({ watched, onDeleteWatched }) {
 function WatchedMovie({ movie, onDeleteWatched }) {
   return (
     <li>
-      <img src={movie.poster} alt={`${movie.title} poster`} />
-      <h3>{movie.title}</h3>
+      <img src={movie.Poster} alt={`${movie.Title} poster`} />
+      <h3>{movie.Title}</h3>
       <div>
         <p>
           <span>⭐️</span>
